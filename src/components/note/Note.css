@@ -1,0 +1,95 @@
+.note {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.note::after {
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid silver;
+    position: absolute;
+    bottom: 10px;
+}
+.note-complite::before {
+    content: '';
+    display: block;
+    width: calc(100% - 88px);
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+}
+@media(max-width: 520px){
+    .note__item {
+        font-size: 1em;
+    }
+    .note-complite::before {
+        width: calc(100% - 55px);
+    }
+}
+
+.note__btns {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+@media(max-width: 520px){
+    .note__btns {
+        gap: 10px;
+    }
+}
+.note__btns-delite {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 3px 6px 4.842px 5px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    background: var(--tab-acent, #F64D86);
+    box-shadow: -0.5px 1px 4px 0px rgba(52, 52, 52, 0.78);
+    cursor: pointer;
+}
+.note__btns-delite:hover {
+    box-shadow: 0px 0px 15px red;
+}
+.note__btns-delite img {
+    width: 16px;
+}
+.note__btns-done {
+    border: 2px dashed silver;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+}
+@media(max-width: 520px){
+    .note__btns-done, .note__btns-delite {
+        width: 25px;
+        height: 25px;
+    }
+}
+.note__btns-done-complite {
+    width: 45px;
+    position: absolute;
+    top: -16px;
+    left: -4px;
+    display: block;
+}
+@media(max-width: 520px){
+    .note__btns-done-complite {
+        width: 35px;
+        top: -10px;
+    }
+}
+.note__btns-done-work {
+    opacity: 0;
+}
+.note__btns-done:hover {
+    box-shadow: 0px 0px 20px rgb(1, 182, 1);
+}

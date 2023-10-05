@@ -1,0 +1,62 @@
+
+.main {
+    max-width: 1920px;
+    width: 96%;
+    height: auto;
+    background-color: bisque;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 100px 30px 50px;
+    border-radius: 20px;
+    position: relative;
+}
+@media(max-width: 520px) {
+    .main {
+        padding: 75px 25px 50px;
+    }
+}
+
+.wing {
+    background-image: url(./img/wing.png);
+    position: absolute;
+    top: -30px;
+    left: 34px;
+    width: 95%;
+    height: 85px;
+    background-size: contain;
+    background-repeat: space;
+}
+@media (max-width: 1024px) {
+    .wing {
+        left: 25px;
+    }
+}
+@media (max-width: 767px) {
+    .wing {
+        left: 11px;
+    }
+}
+
+.new__task {
+    padding: 30px 40px;
+    width: 200px;
+    height: 200px;
+    background-color: #535353;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: -160px;
+    left: 15%;
+}
+.new__task:hover {
+    background-color: #777676;
+}
+.new__task h1 {
+    text-align: center;
+}
+
