@@ -27,10 +27,10 @@ function NoteItem( { todos, setTodos } ) {
     return (
         todos.map( (item, i) => 
         <div className={item.isComplites ? 'note note-complite' : 'note'} key={item._id}>
-            <h2 className='note__item'>{i + 1}) {item.title}</h2>
+            <h2 className='note__item' onClick={ () => status(item._id)} >{i + 1}) <span>{item.title}</span></h2>
            
             <div className="note__btns">
-                <div className="note__btns-done" onClick={ () => status(item._id) }><img src={doneBtn} alt="done" className={item.isComplites ?
+                <div className="note__btns-done" onClick={ () => status(item._id)}><img src={doneBtn} alt="done" className={item.isComplites ?
                 "note__btns-done-complite" :
                 "note__btns-done-work"}/></div>
                 <div className="note__btns-delite" onClick={ () => delite(item._id) }><img src={deliteBtn} alt="delite" /></div>
