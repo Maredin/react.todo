@@ -6,13 +6,13 @@
     background-image: url(./img/bg/bg_square.jpg);
     margin: 0 auto;
     margin-top: 50px;
-    padding: 82px 30px 50px;
+    padding: 63px 30px 50px;
     border-radius: 20px;
     position: relative;
 }
 @media(max-width: 520px) {
     .main {
-        padding: 61px 15px 50px 30px;
+        padding: 63px 15px 50px 30px;
     }
 }
 

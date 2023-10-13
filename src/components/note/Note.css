@@ -9,11 +9,6 @@
     align-items: center;
     cursor: pointer;
 }
-@media(max-width: 520px) {
-    .note {
-        margin: 14px 0;
-    }
-}
 
 .note__item {
     color: #2525cb;
@@ -33,9 +28,6 @@
     left: -15px;
 }
 @media(max-width: 520px){
-    .note__item {
-        font-size: 20px;
-    }
     .note-complite::before {
         width: calc(100% - 20px);
         height: 1px;
