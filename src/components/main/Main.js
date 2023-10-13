@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Main.css';
 import NoteItem from '../note/Note';
 
+import done from './img/done.png'
+
 function Main() {
 
     const [todos, setTodos] = useState(JSON.parse ( localStorage.getItem('date') ) || [] );
@@ -28,9 +30,15 @@ function Main() {
         const sticker = document.querySelector('.sticker');
         sticker.style.display = 'flex';
         let record = document.querySelector('.sticker input');
-        /* record.focus(); */
+
         setTimeout(() => {
             record.focus()}, 100);
+    }
+
+    function delite() {
+        let newArr = [...todos].filter(item => !item.isComplites);
+        setTodos(newArr);
+        localStorage.date = JSON.stringify(newArr);
     }
     
 
@@ -46,7 +54,7 @@ function Main() {
             
             <NoteItem todos={todos} setTodos={setTodos} />
             <div className="new__task" onClick={stickerShow}><h1>НОВАЯ <br />ЗАДАЧА</h1></div>
-            <button className='btn__edit'>edit</button>
+            <button className='btn__edit' onClick={delite}>Очистить</button>
             <form className="sticker">
                 <input type="text" placeholder='Введите заметку' autoFocus />
                 <button onClick={promtUser}>Добавить</button>

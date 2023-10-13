@@ -1,32 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
 
 .note {
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin: 49px 0;
+    margin: 5px 0;
     align-items: center;
+    cursor: pointer;
 }
 @media(max-width: 520px) {
     .note {
-        margin: 16px 0;
+        margin: 14px 0;
     }
 }
 
 .note__item {
     color: #2525cb;
-    font-style: italic;
     margin: 0;
     width: 100%;
-}
-.note__item span {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Caveat', cursive;
+    font-size: 27px;
 }
 .note-complite::before {
     content: '';
     display: block;
-    width: calc(100% - 70px);
+    width: calc(100% - 25px);
     height: 2px;
     background: #2525cb;
     position: absolute;
@@ -35,49 +34,18 @@
 }
 @media(max-width: 520px){
     .note__item {
-        font-size: 1em;
+        font-size: 20px;
     }
     .note-complite::before {
-        width: calc(100% - 50px);
+        width: calc(100% - 20px);
         height: 1px;
     }
 }
 
-.note__btns {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-@media(max-width: 520px){
-    .note__btns {
-        gap: 10px;
-    }
-}
-.note__btns-delite {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    padding: 3px 6px 4.842px 5px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.38);
-    background: var(--tab-acent, #F64D86);
-    box-shadow: -0.5px 1px 4px 0px rgba(52, 52, 52, 0.78);
-    cursor: pointer;
-}
-.note__btns-delite:hover {
-    box-shadow: 0px 0px 15px red;
-}
-.note__btns-delite img {
-    width: 16px;
-}
+
 .note__btns-done {
     width: 30px;
     height: 30px;
-    cursor: pointer;
     position: relative;
 }
 @media(max-width: 520px){
