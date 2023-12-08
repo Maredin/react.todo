@@ -6,21 +6,21 @@ import done from './img/done.png'
 
 function Main() {
 
-    const [todos, setTodos] = useState(JSON.parse ( localStorage.getItem('date') ) || [] );
+    const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('dateboock')) || []);
 
 
     function promtUser(e) {
         e.preventDefault();
         const sticker = document.querySelector('.sticker');
         let record = document.querySelector('.sticker input');
-        if(record.value){
+        if (record.value) {
             let newRecord = {
                 _id: Math.random(),
                 title: record.value,
                 isComplites: false
             }
             let res = [...todos, newRecord];
-            localStorage.setItem('date', JSON.stringify(res));
+            localStorage.setItem('dateboock', JSON.stringify(res));
             setTodos(res);
         }
         record.value = '';
@@ -32,26 +32,27 @@ function Main() {
         let record = document.querySelector('.sticker input');
 
         setTimeout(() => {
-            record.focus()}, 100);
+            record.focus()
+        }, 100);
     }
 
     function delite() {
         let newArr = [...todos].filter(item => !item.isComplites);
         setTodos(newArr);
-        localStorage.date = JSON.stringify(newArr);
+        localStorage.dateboock = JSON.stringify(newArr);
     }
-    
 
-    window.onkeydown = (e)=> {
-        if (e.code === "Enter" || e.code === "NumpadEnter"){
+
+    window.onkeydown = (e) => {
+        if (e.code === "Enter" || e.code === "NumpadEnter") {
             stickerShow();
         }
     }
 
-    return(
+    return (
         <main className='main'>
             <div className="wing"></div>
-            
+
             <NoteItem todos={todos} setTodos={setTodos} />
             <div className="new__task" onClick={stickerShow}><h1>НОВАЯ <br />ЗАДАЧА</h1></div>
             <button className='btn__edit' onClick={delite}>Очистить</button>
